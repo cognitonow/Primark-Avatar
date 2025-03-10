@@ -1,13 +1,284 @@
-<! DOCTYPE html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Primark Avatar V.02</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Section Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         .grey-block {
+            width: 100%;
+            background: #d3d3d3;
+            height: 50px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #fff;
+             z-index: 9999;
+             position: fixed;
+        }
+        .header {
+            padding: 40px;
+            background: #00a0d5;
+            border-radius: 15px;
+            text-align: left;
+            color: #fff;
+            margin: 20px 0;
+            height: 200px;
+            width: 1060px;
+            font-size: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Align items to the bottom */
+            margin-top: -10px; /* Add margin to push footer down */
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .header img {
+            position: absolute;
+            bottom: 0px; /* Push image to the bottom */
+            right: 20px; /* Align with right margin */
+            border-radius: 0px;
+            width: 320px; /* Adjust size to 320px */
+        }
+        .footer {
+            padding: 40px; /* Matching padding */
+            background: #00a0d5;
+            border-radius: 15px;
+            text-align: left; /* Left-align text */
+            color: #fff;
+            margin: 20px 0; /* Matching margin */
+            width: 1060px; /* Locked width */
+            font-size: 14px; /* Footer font size */
+        }
+        .highlight1 {
+            background: #fff;
+            color: #00a0d5;
+            padding: 5px 10px;
+            border: 2px solid #00a0d5;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .highlight2 {
+            background: #fff;
+            color: #00a0d5;
+            padding: 5px 10px;
+            border: 2px solid #00a0d5;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .container {
+            padding: 1px;
+            width: 1060px; /* Locked width */
+            
+             margin-bottom: 600px; /* Add margin to push footer down */
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .new-content {
+            background: #d3d3d3; /* Grey background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+        }
+        .footer-text {
+            width: 40%; /* Adjust width to 40% */
+            font-size: 16px; /* Set paragraph font size to 16px */
+        }
+        .footer-buttons {
+            width: 60%; /* Adjust width to 60% */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end; /* Align buttons to the right */
+            margin-top: 70px; /* Update margin-top to 70px */
+        }
+        .footer-button {
+            background: #00a0d5;
+            color: #fff;
+            padding: 5px 10px; /* Updated padding */
+            border: 2px solid #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            width: 150px; /* Reduced width */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .footer-button:hover {
+            background: #fff;
+            color: #00a0d5;
+        }
+        
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0; /* Add this line for background color */
+    }
+
+        
+        
+    </style>
 </head>
 <body>
-<p style="font-family:verdana"; "color:blue">Work in progress, Primark Avatar V.02 *for internal use only</p>
+   <div class="grey-block">
+        This is a preliminary version and may not reflect the final experience. Please be aware that there may be bugs and issues as we continue to develop and improve the product.
+    </div>
+    <header class="header">
+        <h2>Welcome to the Primark</h2>
+        <h2><span class="highlight1">AI Practice Bot!</span></h2>
+        <img src="https://i.postimg.cc/VsFnk8YX/Banner-Pic.png" alt="Header Image">
+    </header>
+    <div class="container">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Embed</title>
+    <style>
+        #heygen-streaming-embed {
+            z-index: 9999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 600px;
+            height: 600px;
+            border-radius: 8%;
+            border: 2px solid #fff;
+            box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+            transition: all linear 0.1s;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -50%);
+        }
+        #heygen-streaming-embed.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        #heygen-streaming-embed.expand {
+            width: 800px;
+            height: 600px;
+            border: 0;
+            border-radius: 8px;
+        }
+        #heygen-streaming-container {
+            width: 100%;
+            height: 100%;
+        }
+        #heygen-streaming-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="heygen-streaming-embed">
+        <div id="heygen-streaming-container">
+            <iframe allowfullscreen="false" title="Streaming Embed" role="dialog" allow="microphone" src="https://labs.heygen.com/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJXYXluZV8yMDI0MDcxMSIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2EzZmRiMGM2NTIwMjRmNzk5ODRhYWVjMTFlYmYyNjk0XzM0MzUwL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjY4YmQwNDdjMzIyNDRlNDU4NzIyMTZiODZhNmUwYzk0IiwidXNlcm5hbWUiOiJiMDg5MWQyMDk0OTg0MTFiYTQyMDY5MWQyOTYzZmMzZSJ9&inIFrame=1"></iframe>
+        </div>
+    </div>
+    <script>
+        !function(window){
+            const host="https://labs.heygen.com",
+                  url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJXYXluZV8yMDI0MDcxMSIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2EzZmRiMGM2NTIwMjRmNzk5ODRhYWVjMTFlYmYyNjk0XzM0MzUwL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjY4YmQwNDdjMzIyNDRlNDU4NzIyMTZiODZhNmUwYzk0IiwidXNlcm5hbWUiOiJiMDg5MWQyMDk0OTg0MTFiYTQyMDY5MWQyOTYzZmMzZSJ9&inIFrame=1",
+                  wrapDiv=document.createElement("div");
+            wrapDiv.id="heygen-streaming-embed";
+            const container=document.createElement("div");
+            container.id="heygen-streaming-container";
+            const stylesheet=document.createElement("style");
+            stylesheet.innerHTML=`
+                #heygen-streaming-embed {
+                    z-index: 9999;
+                    position: absolute;
+                    left: 50%;
+                    top: 48%;
+                    width: 600px;
+                    height: 600px;
+                    border-radius: 8%;
+                    border: 2px solid #fff;
+                    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+                    transition: all linear 0.1s;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translate(-50%, -50%);
+                }
+                #heygen-streaming-embed.show {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                #heygen-streaming-embed.expand {
+                    width: 800px;
+                    height: 600px;
+                    border: 0;
+                    border-radius: 8px;
+                }
+                #heygen-streaming-container {
+                    width: 100%;
+                    height: 100%;
+                }
+                #heygen-streaming-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            `;
+            const iframe=document.createElement("iframe");
+            iframe.allowFullscreen=!1,
+            iframe.title="Streaming Embed",
+            iframe.role="dialog",
+            iframe.allow="microphone",
+            iframe.src=url;
+            let visible=!1,initial=!1;
+            window.addEventListener("message",(e=>{
+                e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))
+            }));
+            container.appendChild(iframe),
+            wrapDiv.appendChild(stylesheet),
+            wrapDiv.appendChild(container),
+            document.body.appendChild(wrapDiv);
+        }(globalThis);
+    </script>
 </body>
+</html>
 
-<script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJXYXluZV8yMDI0MDcxMSIsInByZXZpZXdJ%0D%0AbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3YzL2EzZmRiMGM2NTIwMjRmNzk5%0D%0AODRhYWVjMTFlYmYyNjk0XzM0MzUwL3ByZXZpZXdfdGFyZ2V0LndlYnAiLCJuZWVkUmVtb3ZlQmFj%0D%0Aa2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6IjY4YmQwNDdjMzIyNDRlNDU4NzIyMTZi%0D%0AODZhNmUwYzk0IiwidXNlcm5hbWUiOiJiMDg5MWQyMDk0OTg0MTFiYTQyMDY5MWQyOTYzZmMzZSJ9&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    left: 50px;\n    top: 50px;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<800?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 600px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
-
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h2>Join the <span class="highlight2">ROA Community</span></h2>
+                <p>Be sure to join our community and check back regularly for fresh updates and new materials.</p>
+                <p>Connect with fellow professionals, share insights, and stay updated and participate in discussions. Be part of the conversation and take your skills to the next level! Together, we’ll build stronger teams!</p>
+            </div>
+            <div class="footer-buttons">
+                <a href="https://primark.eu.crossknowledge.com/sso/session/4276/Enroll/yes/" class="footer-button">Back</a>
+                <a href="https://teams.microsoft.com/l/team/19%3Abm9WSs7DFRsQC_NihaiRtOecqHy4-UjpdEvhJpu_Gtg1%40thread.tacv2/conversations?groupId=7d7c2ae3-dfb4-47d3-888b-e00f430d6eac&amp;tenantId=aea37347-50ba-4d20-8681-47eaedfab1f8" class="footer-button">Join Community</a>
+                <a href="https://primark.eu.crossknowledge.com/sso/session/4276/Enroll/yes/" class="footer-button">Hub Home</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
